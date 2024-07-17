@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const product = require('./ProudctModels/model')
+const product = require('../ProudctModels/model')
 
 router.get('/' , (req , res)=>{
     res.send('hello from Node API')

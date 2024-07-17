@@ -7,12 +7,13 @@ dotenv.config()               //hiding the password
 app.use(express.json());  //body parser middleware to make express read JSON
 
 // Importing routes
-const routess = require('./CRUDroutes')
+const postroutes = require('./routes/PostRoute')
+const getroutes = require('./routes/getRoute')
+const updateRoute = require('./routes/updateroute')
 
-
-app.use('/api',routess)
-
-
+app.use('/api', postroutes)
+app.use('/api' , getroutes)
+app.use('/api' ,updateRoute )
 
 
 app.listen(3000 , ()=> {
